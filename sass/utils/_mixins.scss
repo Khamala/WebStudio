@@ -1,0 +1,41 @@
+@mixin bordered($color) {
+    border: 1px solid $color;
+}
+
+@mixin font($size, $weight, $lh, $ls) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+@mixin centeredFlex($dis) {
+    display: $dis;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

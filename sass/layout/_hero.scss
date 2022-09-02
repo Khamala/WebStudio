@@ -1,0 +1,120 @@
+.hero {
+    background-color: var(--primary-dark-bg-color);
+    text-align: center;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @include tablet {
+        height: 400px;
+    }
+
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
+
+.overlay {
+    max-width: 1600px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/bg-hero-mob-x1-min.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/bg-hero-mob-x2-min.jpg);
+        }
+
+    @include tablet {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/bg-hero-tab-x1-min.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/bg-hero-tab-x2-min.jpg);
+            }
+    }
+
+    @include desktop {
+        height: 600px;
+    }
+
+    @include desktop {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/bg-hero-des-x1-min.jpg);
+
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/bg-hero-des-x2-min.jpg);
+            }
+    }
+}
+
+.hero__title {
+    /* Одинаковые для всех брекпоинтов */
+    margin-top: 0px;
+    margin-bottom: 30px;
+    /* ------------------------------- */
+
+    /* Изменение шрифта */
+    @include font(26px, 900, 1.66, 0.06em);
+    color: var(--primary-button-color);
+    text-transform: uppercase;
+    
+    @include desktop {
+        @include font(44px, 900, 1.36, 0.06em);
+    }
+    /* ------------------------------- */
+}
+
+.hero__button {
+    /* Одинаковые для всех брекпоинтов */
+    @include font(16px, 700, 1.88, 0.06em);
+    color: var(--primary-button-color);
+    text-align: center;
+    background-color: var(--button-bg-color);
+
+    min-width: 200px;
+    padding: 10px 32px;
+
+    margin: 0 auto;
+
+    @include transition(color);
+    @include transition(background-color);
+    /* ------------------------------- */
+
+    display: flex;
+    align-items: center;
+    
+    &:hover, &:focus {
+        color: var(--primary-button-color);
+        background-color: var(--button-color-hover);
+    }
+}
+
+

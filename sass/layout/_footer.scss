@@ -1,0 +1,262 @@
+.footer {
+    background-color: var(--primary-dark-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        
+    }
+}
+
+.logo-footer__link {
+    display: inline-block;
+    color: var(--primary-button-color);
+    font-family: var(--second-font);
+    @include font(26px, 700, 1.19, 0.03em);
+    margin-bottom: 20px;
+    @include transition(color);
+
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.logo__accent {
+    color: var(--accent-color);
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+        text-align: center;
+        
+    }
+    
+    @include desktop {
+        margin-right: auto;
+    }
+}
+
+
+
+/*Footer-kontakts*/
+
+.address__list .link:hover,
+.address__list .link:focus {
+    color: var(--accent-color);
+}
+
+.address__list .link {
+    @include transition(color);
+}
+
+.address__item {
+    margin-bottom: 9px;  
+}
+
+.address__text {
+    @include font(14px, null, 1.71, 0.03em);
+    font-style: normal;
+    color: var(--primary-button-color);
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+
+.address__mail,
+.address__tel {
+    color: rgba(255, 255, 255, 0.6);
+    @include font(14px, 400, 1.71, null);
+    font-style: normal;
+}
+
+.address__mail {
+    display: inline-block;
+}
+
+/*Footer Social*/
+
+.footer__social {
+    margin-top: 60px;
+    text-align: center;
+    margin-right: 0;
+    
+    @include tablet {
+        margin-top: 0;
+    }
+    
+    @include desktop {
+        margin-right: auto;
+        text-align: start;
+    }
+
+    
+}
+
+.social__footer-icons {
+    fill: var(--primary-button-color);
+}
+
+.footer__text {
+    @include font(14px, 700, 1.14, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--primary-button-color);
+    margin: 0;
+    margin-bottom: 20px;
+    @include desktop {
+        text-align: left;
+    }
+}
+
+.footer__soclist {
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+            @include centeredFlex(flex);
+            justify-content: left;
+        }
+}
+
+.footer__flex-element:not(:last-child) {
+    
+    margin-right: 10px;
+    
+}
+
+.social__link {
+    @include centeredFlex(flex);
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    color: var(--primary-button-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    @include transition(background-color);
+
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.footer-wrap {
+    text-align: center;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    } 
+
+    @include desktop {
+        text-align: start;
+        margin-right: 70px;
+    }
+}
+
+/*Footer-form*/
+
+.form__container {
+    margin-top: 60px;
+    
+    @include desktop {
+        margin-top: 0;
+        text-align: start;
+    }
+}
+
+.form__mail {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+}
+
+.form-mail__input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    @include bordered(rgba(255, 255, 255, 0.3));
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 12px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 20px;
+
+    &:hover, &:focus {
+        border: 1px solid var(--accent-color);
+    }
+    
+    
+    @media screen and (min-width: 320px) {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    @include tablet {
+        width: 450px;
+        margin-right: 0;
+    }
+    
+    @include desktop {
+        margin-bottom: 0px;
+        margin-right: 12px;
+    }
+    
+}
+
+
+
+
+/*Kostyl*/
+.footer__text-portfolio {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--primary-button-color);
+
+    @include font(14px, 700, 1.14, 0.03em);
+}
+
+.form-mail__btn {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: var(--button-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    @include font(16px, 700, 1.88, 0.03em);
+    padding-left: 29px;
+    color: var(--primary-bg-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        background-color: var(--button-color-hover);
+    }
+}
+
+.form-mail__send {
+    right: 28px;
+    margin-left: 10px;
+}
